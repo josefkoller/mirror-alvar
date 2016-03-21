@@ -74,9 +74,9 @@ endif(ALVAR_PACKAGE)
 if($ENV{OPENCV_ROOT})
     set(OpenCV_ROOT_DIR $ENV{OPENCV_ROOT} CACHE PATH "The OpenCV root directory")
 endif($ENV{OPENCV_ROOT})
-find_package(OpenCV COMPONENTS calib3d core features2d flann highgui imgproc legacy ml video)
+find_package(OpenCV 3.1 COMPONENTS calib3d core features2d flann highgui imgproc ml video)
 if(NOT OpenCV_FOUND)
-    find_package(OpenCV COMPONENTS calib3d core features2d flann highgui imgproc legacy ml video
+    find_package(OpenCV 3.1 COMPONENTS calib3d core features2d flann highgui imgproc ml video
                  NO_MODULE NAMES OpenCV
                  PATHS ${OpenCV_ROOT_DIR} ${OpenCV_ROOT_DIR}/build ${OpenCV_ROOT_DIR}/opencv/build)
     list(GET OpenCV_LIB_DIR 0 OpenCV_ROOT_DIR)
