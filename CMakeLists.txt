@@ -71,7 +71,7 @@ if(ALVAR_PACKAGE)
 endif(ALVAR_PACKAGE)
 
 # find package dependencies
-find_package(OpenCV 3.1 REQUIRED)
+find_package(OpenCV 3.4 REQUIRED)
 if(WIN32)
     add_definitions(-DNOMINMAX)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
